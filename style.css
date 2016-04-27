@@ -40,3 +40,8 @@ a{
 .logout{
 	margin-left: 800px;
 }
+
+a:hover { 
+    background-color: blue;
+}
+
