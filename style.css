@@ -1,6 +1,4 @@
-body{
-	background-color: black;
-}
+
 
 .log{
 	background-color: white;
@@ -26,4 +24,19 @@ body{
 	margin:0 auto;
 	width: 500px;
 	line-height: 100px;
+}
+
+nav{
+	background: black;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+	margin: 10px;
+	font-size: 25px;
+}
+
+.logout{
+	margin-left: 800px;
 }
