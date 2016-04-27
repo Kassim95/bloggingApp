@@ -1,11 +1,18 @@
-class User
+class User <ActiveRecord::Base
+	has_many :posts
+	has_many :followers
+	has_many :followings
 end
 
-class Post
+class Post <ActiveRecord::Base
+	belongs_to :user
 end
 
-class Follower
+class Follower <ActiveRecord::Base
+	belongs_to :user
 	end
 
-	class Following
+	class Following <ActiveRecord::Base
+		belongs_to :user
+		has_many :users, through: :followers
 	end
