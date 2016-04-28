@@ -37,3 +37,7 @@ post '/sign-in' do
 	end   
 	redirect "/" 
 end
+
+get '/profile' do 
+	erb :profile
+end
