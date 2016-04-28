@@ -7,5 +7,5 @@ require 'rack-flash'
 
 enable :sessions
 use Rack::Flash, :sweep => true
-set :database, 'sqlite3:microblog.sqlite3'
+configure(:development){set :database, "sqlite3:microblog.sqlite3"}
 set :sessions, true

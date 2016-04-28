@@ -2,7 +2,8 @@ class User <ActiveRecord::Base
 	has_many :posts
 	has_many :followers
 	has_many :followings
-end
+
+	end
 
 class Post <ActiveRecord::Base
 	belongs_to :user
@@ -14,5 +15,4 @@ class Follower <ActiveRecord::Base
 
 	class Following <ActiveRecord::Base
 		belongs_to :user
-		has_many :users, through: :followers
 	end
