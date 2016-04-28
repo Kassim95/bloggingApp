@@ -11,31 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160427221949) do
+ActiveRecord::Schema.define(version: 20160428172821) do
 
   create_table "followers", force: :cascade do |t|
     t.integer "user_id"
     t.string  "username"
-    t.integer "profile_id"
   end
 
-  create_table "following", force: :cascade do |t|
-    t.integer "user_id"
-    t.string  "username"
-  end
+  add_index "followers", ["user_id"], name: "index_followers_on_user_id"
 
   create_table "followings", force: :cascade do |t|
     t.integer "user_id"
     t.string  "username"
   end
 
+  add_index "followings", ["user_id"], name: "index_followings_on_user_id"
+
   create_table "posts", force: :cascade do |t|
-    t.integer  "user_id"
-    t.string   "username"
-    t.string   "body"
-    t.string   "title"
-    t.datetime "date_created"
+    t.integer "user_id"
+    t.string  "username"
+    t.string  "body"
   end
+
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string "username"

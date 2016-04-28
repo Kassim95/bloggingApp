@@ -2,8 +2,7 @@ class User <ActiveRecord::Base
 	has_many :posts
 	has_many :followers
 	has_many :followings
-
-	end
+end
 
 class Post <ActiveRecord::Base
 	belongs_to :user
