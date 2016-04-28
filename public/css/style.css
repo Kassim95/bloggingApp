@@ -45,3 +45,31 @@ a:hover {
     background-color: blue;
 }
 
+#feed-container {
+	background: yellow;
+	width: 60%,
+	height: 60vh;
+	margin: 5% 20%;
+	padding: 0 0 500px 0;
+	border: solid black 2px;
+	border-radius: 25px;
+}
+
+#microchirp-h1 {
+	text-align: center;
+	margin-left: 0 auto;
+}
+
+#target-posts {
+	width: 90%;
+	margin: 0 auto;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+img {
+	max-height: 20%;
+	max-width: 20%;
+	float: left;
+}
+

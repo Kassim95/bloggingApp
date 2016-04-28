@@ -22,7 +22,7 @@ def current_user
 end
 
 get '/' do 
-	erb :home, :layout => false
+	erb :home
 end
 
 post '/sign-in' do 
@@ -36,4 +36,8 @@ post '/sign-in' do
 		flash[:alert] = "There was a problem signing you in."   
 	end   
 	redirect "/" 
+end
+
+get "/feed" do
+	erb :feeds
 end
