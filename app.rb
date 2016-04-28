@@ -38,6 +38,12 @@ post '/sign-in' do
 	redirect "/" 
 end
 
+
 get "/feed" do
 	erb :feeds
 end
+
+get '/profile' do 
+	erb :profile
+end
+
