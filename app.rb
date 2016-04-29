@@ -22,7 +22,7 @@ def current_user
 end
 
 get '/' do 
-	erb :home
+	erb :home, :layout => false
 end
 
 post '/sign-in' do 
@@ -31,7 +31,7 @@ post '/sign-in' do
 	if @user && @user.password == params[:login][:password]     
 		session[:user_id] = @user.id     
 		flash[:notice] = "You've been signed in successfully."  
-		redirect "/feeds"  
+		redirect "/feed"  
 	else     
 		flash[:alert] = "There was a problem signing you in."   
 	end   
